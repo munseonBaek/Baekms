@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"></html>
+<head>
+    <meta charset="UTF-8"> <!-- html 파일의 인코딩을 알려주는 테그 -->
+  <meta name="Generator" content="EditPlus"> <!-- 제작도구 -->
+  <meta name="Author" content="홍길동"> <!-- 문서 저자의 이름 -->
+  <meta name="Keywords" content="JQuery, html, append"> <!-- 문서에 대한 키워드 -->
+  <meta name="Description" content="2023-09-15"> <!-- 문서에 대한 설명 -->
+<title>JQuery</title>
+<script src="jquery-5.7.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $("button").on({
+            click: function(){
+                $("#name").css("color","#0055AF");
+            }
+        });
+        
+        $("#1").on({
+            click: function() {
+                alert("요소를 클릭했군요!");
+            },
+            mouseenter: function() { 
+                $("#2").text("마우스가 요소에 접근했군요!");          
+            },
+            mouseleave: function() {
+                $("#2").css({
+                    "background-color": "#fef91b",
+                    "color": "#28A300",
+                    "font-weight": "bold",
+                    "font-size": "130%"
+                });
+                $("#2").text("마우스가 문장을 빠져 나왔군요!");
+            }
+        });
+    });
+    </script>
+    
+</head>
+<body>
+    <p id="1">마우스 롤오버 기능</p>
+    <div id="2"></div>
+    <p>글 색상 바꾸기</p>
+    <div id="name">백문선</div> <button>이곳을 클릭 하세요</button>
+</body>
+</html>
