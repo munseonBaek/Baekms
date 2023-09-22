@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"></html>
+<head>
+    <meta charset="UTF-8"> <!-- html 파일의 인코딩을 알려주는 테그 -->
+  <meta name="Generator" content="EditPlus"> <!-- 제작도구 -->
+  <meta name="Author" content="홍길동"> <!-- 문서 저자의 이름 -->
+  <meta name="Keywords" content="JQuery, html, append"> <!-- 문서에 대한 키워드 -->
+  <meta name="Description" content="2023-09-15"> <!-- 문서에 대한 설명 -->
+<title>JQuery</title>
+<script src="jquery-5.7.1.js"></script>
+<script>
+$(document).ready(function(){
+    // 실행과 동시에 j하늘색 ID선택자가 실행됩니다
+    $("#j하늘색").css("color","#00D8FF");       //글색 하늘색
+    $("#j하늘색").css("font-weight","bold");    //글색 진하게
+
+    $("button").on({
+        click: function(){
+            $("#j진하기").css("color","#0100FF");           //글색 파란색
+            $("#j진하기").css("font-weight","bold");        //글색 굵게
+            $("#j빨간색").css("color","#E22500");           //글색 빨간색
+
+            $("div").css({"backgournd-color" : "#ffffff",   //배경색 노란색
+                          "font-weight"      : "normal",    //글 두께
+                          "font-family"      : "D2Coding",  //글꼴
+                          "font-size"        : "150%"       //글 크기
+            });     
+        }, // 마지막 부분은 ,콤머를 입력하지 않는다.
+        mouseleave: function(){
+            $("#j하늘색").css("color","#E22500");
+        } // 마지막 부분은 ,콤머를 입력하지 않는다.
+    });
+
+    $("#j감동").on({
+        click: function(){
+            $("#j진하기").css("color","#0100FF");
+            $("#j진하기").css("font-weight","bold");
+            $("#j빨간색").css("color","#E22500"); 
+
+            $("div").css({"backgournd-color" : "#ffffff",
+                          "font-weight"      : "normal",
+                          "font-family"      : "D2Coding",
+                          "font-size"        : "150%" 
+            });
+    },
+
+    mouseleave: function(){
+        $("#j감동").css("color","#E22500");
+    }
+});
+
+    $("#j녹석").on({
+        mouseenter: function(){
+            $(".aaa").css({"font-family"    : "D2Coding",
+                           "font-size"      : "23px"
+            });
+        }
+    });
+
+});
+</script>
+</head>
+<body>
+    <p>중용 23장</p>
+    <div>작은 일도 무사하지 않고 <span id="j진하기">최선</span>을 다해야 한다.<p>
+        <span id="j빨간색">작은</span> 일에도 최선을 다하면 <span id="j하늘색">정성</span>
+        스럽게 된다.<p>
+        정성스럽게 되면 겉에 베어 나오게 되고,<p>
+        겉에 베어 나오면 겉으로 드러나고,<p>
+        겉으로 드러나면 이내 밝아지고,<P>
+        밝아지면 남을 <span id="j감동">감동</span>시키고,<p>
+        남을 감동시키면 이내 변하게 되고,<p>
+        변하면 생육된다.<p></p>
+        그러니 <span id="j녹석">오직 세상에서 <span class="aaa">지극히 정성</span>
+        을 다하는 사람만</span>이<p>
+        나와 세상을 변하게 할 수 있는 것이다.</div>
+        
+
+    <button>마우스로 클릭하면 글 속성 값이 바뀝니다!</button>
+</body>
